@@ -44,6 +44,7 @@ jobs:
       - name: create-app
         run: npx @backstage/create-app@latest --path example-app --skip-install
         env:
+          BACKSTAGE_APP_NAME: example-app
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
 
       - name: yarn build
