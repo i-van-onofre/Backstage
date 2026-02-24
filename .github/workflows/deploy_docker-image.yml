@@ -47,6 +47,12 @@ jobs:
           BACKSTAGE_APP_NAME: example-app
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
 
+      - name: install dependencies
+        run: yarn install
+        working-directory: ./example-app
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+
       - name: yarn build
         run: yarn build:backend
         working-directory: ./example-app
